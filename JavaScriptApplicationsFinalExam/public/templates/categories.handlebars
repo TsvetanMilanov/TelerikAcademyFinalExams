@@ -1,0 +1,12 @@
+<div id="categories">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Categories:</h3>
+        </div>
+        {{#each this}}
+            <div class="panel-body">
+                <h5 class="panel-title"><a href="#/home?category={{this}}">{{this}}</a></h5>
+            </div>
+        {{/each}}
+    </div>
+</div>

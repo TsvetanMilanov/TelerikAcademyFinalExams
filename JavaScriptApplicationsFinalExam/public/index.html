@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fortune Cookies</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css"/>
+</head>
+<body>
+<div id="root">
+    <nav class="nav navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="#/home">Home</a></li>
+                <li><a href="#/categories">All Categories</a></li>
+                <li class="li-my-cookies"><a href="#/my-cookies">My Cookies</a></li>
+                <li class="li-my-cookie"><a href="#/my-cookie">My Hourly Cookie</a></li>
+                <li class="li-add-cookie"><a href="#/add-new-cookie">Share New Fortune Cookie</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/login" class="login-li">Login</a></li>
+                <li><a href="#/register" class="register-li">Register</a></li>
+                <li class="logout-li"><a href="#/logout">Logout</a></li>
+                <li class="span-current-user"></li>
+            </ul>
+        </div>
+    </nav>
+    <br/>
+
+    <div id="content" class="container"></div>
+</div>
+
+<!-- Libs -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/toastr/toastr.js"></script>
+<script src="bower_components/handlebars/handlebars.js"></script>
+<script src="bower_components/sammy/lib/sammy.js"></script>
+<script src="bower_components/sha1/index.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/jquery-quick-pagination/js/jquery.quick.pagination.js"></script>
+
+<!-- App Settings: -->
+<script src="js/requester.js"></script>
+<script src="js/templates.js"></script>
+<script src="js/utilities.js"></script>
+<script src="js/validator.js"></script>
+<!-- App Controllers: -->
+<script src="js/controllers/home-controller.js"></script>
+<script src="js/controllers/users-controller.js"></script>
+<script src="js/controllers/cookies-controller.js"></script>
+<!-- App: -->
+<script src="js/app.js"></script>
+</body>
+</html>

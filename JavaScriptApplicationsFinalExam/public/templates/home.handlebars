@@ -1,0 +1,54 @@
+<h2 class="home-header">All Fortune Cookies</h2>
+<div class="jumbotron">
+    <div id="container">
+        <label class="col-md-4">
+            Sort by:
+            <select name="select-sort" id="select-sort-by">
+                <option value="Likes">Likes</option>
+                <option value="Date">Share Date</option>
+            </select>
+
+            <button id="btn-sort">Sort</button>
+        </label>
+        <label class="col-md-6">
+            Filter by category name:
+            <input type="text" id="input-category-name" placeholder="Category name"/>
+            <button id="btn-filter">Filter</button>
+        </label>
+
+        <div class="col-md-1">
+            <a href="#/home" class="btn btn-success">Clear All filters</a></div>
+        <br/>
+        <br/>
+    </div>
+    <br/>
+
+    <div id="cookies">
+        {{#each this}}
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><a href="#/home?category={{this.category}}">{{this.category}}</a></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{{this.img}}" alt="" width="250" height="250"/>
+                        </div>
+                        <div class="col-md-5">
+                            <br/>
+                            <span>{{this.text}}</span> <br/> <br/>
+                            <span><strong>Date:</strong> {{this.shareDate}}</span> <br/> <br/>
+                            <span><strong>Likes:</strong> {{this.likes}} | <strong>Dislikes:</strong> {{this.dislikes}}</span>
+
+                            <div>
+                                <button data-id="{{this.id}}" class="btn btn-success btn-like">Like</button>
+                                <button data-id="{{this.id}}" class="btn btn-danger btn-dislike">Dislike</button>
+                                <button data-id="{{this.id}}" class="btn btn-info btn-share">Share</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
